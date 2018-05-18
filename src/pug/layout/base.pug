@@ -1,0 +1,23 @@
+doctype html
+html(lang="en" ng-app="app")
+  head
+    block page-title
+      title Title
+    include ../base/head
+
+  block vars
+    - var bodyClasses = '';
+
+  body(class=bodyClasses ng-controller="generalCtrl")
+    .page
+      include ../objects/header
+      .content
+        block page-content
+
+      div {{test}}
+
+      include ../objects/footer
+    include ../base/cellar
+
+
+
